@@ -1,0 +1,166 @@
+/* === CARDS CORRIERI === */
+.cardCorr {
+  background: #f5e8c7; /* beige chiaro */
+  border: 1px solid #d8c292;
+  border-radius: 12px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+  padding: 15px;
+  margin: 12px;
+  width: 240px;
+  display: inline-block;
+  vertical-align: top;
+  text-align: center;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.cardCorr:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+}
+
+.cardCorr img {
+  max-width: 100%;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+
+.cardCorr p {
+  margin: 5px 0;
+  color: #3a3a3a;
+  font-size: 14px;
+}
+
+/* === CARDS FILIALI === */
+.cardFil {
+  background: #a8daf0; /* azzurro tenue */
+  border: 1px solid #74c0dd;
+  border-radius: 12px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+  padding: 15px;
+  margin: 12px;
+  width: 240px;
+  display: inline-block;
+  vertical-align: top;
+  text-align: center;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.cardFil:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+}
+
+.cardFil h4 {
+  margin-bottom: 8px;
+  color: #145374;
+}
+
+/* === CONTAINER SFONDI === */
+#divFiliali {
+  background: #a0f2dc;
+  padding: 20px;
+  border-radius: 12px;
+}
+
+#divCorrieri {
+  background: #9edb97;
+  padding: 20px;
+  border-radius: 12px;
+}
+
+#divPacchi {
+  background: #cfa1ee;
+  padding: 20px;
+  border-radius: 12px;
+}
+
+/* === CARDS PACCHI === */
+.cardPacchi {
+  background: #ffa8cf;
+  border: 1px solid #c4648f;
+  border-radius: 12px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+  padding: 15px;
+  margin: 12px;
+  width: 240px;
+  display: inline-block;
+  vertical-align: top;
+  text-align: left;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.cardPacchi:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+}
+
+.cardPacchi h5 {
+  margin-bottom: 6px;
+  color: #2b6777;
+}
+
+.cardPacchi p {
+  margin: 4px 0;
+  color: #444;
+  font-size: 13px;
+}
+.cardFil .listaPacchi {
+  display: flex;
+  flex-direction: column;   /* Pacchi uno sotto l'altro */
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.cardFil .cardPacchi {
+  width: 100%;            /* Si adattano alla card della filiale */
+  margin: 0;              /* Rimuovo margini esterni */
+  box-shadow: none;       /* Evito effetto sovrapposizione */
+  border: 1px solid #6aa7b3;
+}
+/* === NAVBAR === */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #2b6777;         /* Blu petrolio elegante */
+  padding: 12px 20px;
+  color: white;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  border-bottom: 3px solid #145374;
+}
+
+.logo {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.btn-login {
+  background: #f2f2f2;
+  color: #2b6777;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 14px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.btn-login:hover {
+  background: #dcdcdc;
+}
+/* === MODAL LOGIN/CREA ===*/
+.modal {
+  display: none; 
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.5); /* oscura sfondo */
+  justify-content: center;
+  align-items: center;
+}
+.modal.show {
+  display: flex;
+}

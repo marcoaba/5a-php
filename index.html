@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Gestione Corrieri</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="js/libreria.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/index.js"></script>
+    <link rel="stylesheet" href="css/index.css">
+
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-left">
+                <span class="logo">🚚 Gestionale Corrieri</span>
+            </div>
+            <div class="nav-right">
+                <button id="btn-login" class="btn-login">👤 Login</button>
+                <button id="btnCrea" class="btn-login">⚡Crea</button>
+            </div>
+        </nav>
+    </header>
+    <!-- MODAL LOGIN -->
+    <div class="modal" id="loginModal">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <h5 class="modal-title">Accesso Utente</h5>
+                    <button type="button" class="btn-close" id="closeModal"></button>
+                </div>
+
+                <div class="modal-body">
+                    <input type="email" id="loginMail" class="form-control mb-2" placeholder="Email">
+                    <input type="password" id="loginPassword" class="form-control mb-2" placeholder="Password">
+                    <div id="loginError" class="text-danger small"></div>
+                </div>
+
+                <div class="modal-footer">
+                    <div class="p-4">
+                        <button id="btnConfirmLogin" class="btn btn-success">Accedi</button>
+                    </div>
+
+                    <div class="p-4">
+                        <button id="btn-crea" class="btn-login">⚡Crea</button>
+                    </div>
+
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- MODAL Crea -->
+    <div class="modal" id="creaModal">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <h5 class="modal-title">Creazione Utente</h5>
+                    <button type="button" class="btn-close" id="closeModal2"></button>
+                </div>
+
+                <div class="modal-body">
+                    <div id="creaError" class="text-danger small"></div>
+                    <div class="row px-4">
+                        <div class="col">
+                            <label for="txtNome" class="form-label">Nome</label>
+                            <input type="text" id="txtNome" class="form-control" placeholder="Inserisci il Nome">
+                        </div>
+                        <div class="col">
+                            <label for="txtCognome" class="form-label">Cognome</label>
+                            <input type="text" id="txtCognome" class="form-control" placeholder="Inserisci il Cognome">
+                        </div>
+                    </div>
+
+                    <div class="row px-4 mt-3">
+                        <div class="col">
+                            <label for="txtIndirizzo" class="form-label">Indirizzo</label>
+                            <input type="text" id="txtIndirizzo" class="form-control"
+                                placeholder="Inserisci l'Indirizzo">
+                        </div>
+                        <div class="col">
+                            <label for="txtCittà" class="form-label">Città</label>
+                            <input type="text" id="txtCittà" class="form-control" placeholder="Inserisci la Città">
+                        </div>
+                    </div>
+
+                    <div class="row px-4 mt-3">
+                        <div class="col">
+                            <label for="txtCap" class="form-label">CAP</label>
+                            <input type="text" id="txtCap" class="form-control" placeholder="Inserisci il CAP">
+                        </div>
+                        <div class="col">
+                            <label for="txtMail" class="form-label">Mail</label>
+                            <input type="email" id="txtMail" class="form-control" placeholder="Inserisci la Mail">
+                        </div>
+                    </div>
+
+                    <div class="row px-4 mt-3">
+                        <div class="col">
+                            <label for="txtTelefono" class="form-label">Telefono</label>
+                            <input type="tel" id="txtTelefono" class="form-control" placeholder="Inserisci Telefono">
+                        </div>
+                        <div class="col">
+                            <label for="txtPassword" class="form-label">Password</label>
+                            <input type="password" id="txtPassword" class="form-control"
+                                placeholder="Inserisci password">
+                        </div>
+                    </div>
+
+
+                    <p id="loginError" class="text-danger mt-2 text-center" style="display:none;">Credenziali errate!
+                    </p>
+
+                    <div class="modal-footer">
+                        <div class="p-2">
+                            <button id="btnConfirmCrea" class="btn btn-success">⚡Crea</button>
+                        </div>
+                        <div class="p-2">
+                            <button id="btnLogin" class="btn-login">Accedi</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <main id="main">
+        <div class="container">
+            <div id="divCorrieri" class="d-flex flex-wrap gap-3"></div>
+            <div id="divFiliali" class="d-flex flex-wrap gap-3"></div>
+        </div>
+    </main>
+
+</body>
+
+</html>
